@@ -24,11 +24,11 @@ export default class App extends Component {
   }
 
   componentDidUpdate (_, prevState) {
-    const newContact = this.state.contacts;
-    const prevContact = prevState.contacts;
+    const newContacts = this.state.contacts;
+    const prevContacts = prevState.contacts;
 
-    if (newContact !== prevContact) {
-      localStorage.setItem('contacts', JSON.stringify(newContact));
+    if (newContacts !== prevContacts) {
+      localStorage.setItem('contacts', JSON.stringify(newContacts));
     }
   }
   
