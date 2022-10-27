@@ -11,7 +11,7 @@ const initialValues = {
 
 const nameRegExp = /^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$/;
 
-const phoneRegExp = /\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}/;
+const phoneRegExp = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
 
 const validationSchema = yup.object().shape({
     name: yup.string().matches(nameRegExp, 'Name may contain only letters, apostrophe, dash and spaces.').required('Please fill in the name'),
